@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Загрузить видео</title>
+    <link rel="icon" type="image/x-icon" href="../static/img/DALL·E-2025-01-13-23.22.50-A-minimalist-logo-design-for-a-video-hosting-platform-named-_OpenTube_-Photoroom.png">
+    <link rel="stylesheet" href="../static/css/main.css">
+    <link rel="stylesheet" href="../static/css/upload_video.css">
+</head>
+<body>
+    <header>
+        <div id="logoname">
+            <img id="logo" src="../static/img/DALL·E-2025-01-13-23.22.50-A-minimalist-logo-design-for-a-video-hosting-platform-named-_OpenTube_-Photoroom.png" alt="logo" height="30">
+            <h1 id="name">Vid-Open</h1>
+        </div>
+        <form action="/search" method="get">
+            <input id="search" type="text" name="search" placeholder="Введите запрос">
+            <button id="searchbtn" type="submit">Найти</button>
+        </form>
+        <a href="/myaccount" id="myaccount">{{ current_user.username }}<img src="{{ url_for('static', filename=current_user.profile_picture) }}" alt="" height="30"></a>
+    </header>
+    <nav id="navigation-panel">
+        <p id="navigator">Навигатор</p>
+        <a class="categories" href="/music">Музыка</a>
+        <a class="categories" href="/movies">Фильмы и сериалы</a>
+        <a class="categories" href="/videogame">Видеоигры</a>
+        <a class="categories" href="/news">Новости</a>
+        <a class="categories" href="/sport">Спорт</a>
+        <a class="categories" href="/learn">Обучение</a>
+    </nav>
+    <main>
+        <h1>Загрузка видео</h1>
+        <form enctype="multipart/form-data" action="/myaccount/upload" method="post" class="upload-container">
+            <label for="preview">Добавьте превью видео:</label>
+            <br>
+            <input type="file" name="preview" id="preview">
+            <br>
+            <label for="video_upload">Добавьте видео:</label>
+            <br>
+            <input type="file" name="video_upload" id="video_upload">
+            <br>
+            <label for="video-name">Укажите название для видео:</label>
+            <br>
+            <input type="text" name="video-name" id="video-name">
+            <br>
+            <label for="description">Укажите описание:</label>
+            <br>
+            <textarea name="description" id="description"></textarea>
+            <br>
+            <label for="category">Выберите категорию:</label>
+            <select name="category" id="category">
+                <option value="music">Музыка</option>
+                <option value="films">Фильмы и сериалы</option>
+                <option value="videogames">Видеоигры</option>
+                <option value="news">Новости</option>
+                <option value="sport">Спорт</option>
+                <option value="learn">Обучение</option>
+            </select>
+            <br>
+            <button id="upload_video" type="submit">Загрузить видео</button>
+        </form>
+    </main>
+        
+</body>
+</html>

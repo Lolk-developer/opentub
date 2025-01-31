@@ -1,0 +1,99 @@
+.main {
+    padding-left: 0;
+}
+
+#please-login {
+    text-align: center;
+}
+
+#attention {
+    font-weight: bold;
+}
+
+#login {
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 10px 20px 10px 20px;
+    border: 2px solid black;
+    border-radius: 20px;
+    margin-right: 20px;
+}
+
+#login:hover {
+    color: black;
+    background-color: white;
+}
+
+#registration {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 10px 20px 10px 20px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+#registration:hover {
+    color: white;
+    background-color: black;
+}
+
+#subscribe {
+    padding: 10px;
+    background-color: white;
+    border-radius: 20px;
+    border-color: red;
+}
+
+#subscribe:hover {
+    background-color: red;
+    color: white;
+}
+
+#like, #dislike {
+    display: inline;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+#like:hover, #dislike:hover {
+    background-color: black;
+    color: white;
+}
+
+#comment-bar {
+    border-radius: 10px;
+}
+
+#coment-textarea {
+    border-radius: 10px;
+    width: 100%;
+    font-family: Roboto, Arial, sans-serif;;
+}
+
+#send-comment {
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+#video-main {
+    border-radius: 20px;
+    width: 100%;
+    height: 900px
+}
+
+@media (max-width: 480px) {
+    #video-main {
+        width: 100%;
+        height: auto;
+    }
+
+    #coment-textarea {
+        width: 100%;
+    }
+}

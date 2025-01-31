@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход</title>
+    <link rel="icon" type="image/x-icon" href="../static/img/DALL·E-2025-01-13-23.22.50-A-minimalist-logo-design-for-a-video-hosting-platform-named-_OpenTube_-Photoroom.png">
+    <link rel="stylesheet" href="../static/css/login.css">
+    <link rel="stylesheet" href="../static/css/main.css">
+</head>
+<body>
+    <header>
+        <div id="logoname">
+            <img id="logo" src="../static/img/DALL·E-2025-01-13-23.22.50-A-minimalist-logo-design-for-a-video-hosting-platform-named-_OpenTube_-Photoroom.png" alt="logo" height="30">
+            <h1 id="name">Vid-Open</h1>
+        </div>
+    </header>
+    <div id="background">
+        <div id="login-pannel">
+            <h1 id="login-title">Вход</h1>
+            <form action="/login" method="post">
+                <div id="nickname">
+                    <input type="email" name="login" placeholder="e-mail" required>
+                </div>
+                <br>
+                <div id="password">
+                    <input type="password" name="password" placeholder="Пароль" required>
+                </div>
+                <br>
+                <a href="/registration">Нет аккаунта? Зарегистрироваться</a>
+                <br>
+                <button type="submit">Войти</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

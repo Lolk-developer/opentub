@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="icon" type="image/x-icon" href="../static/img/DALL·E-2025-01-13-23.22.50-A-minimalist-logo-design-for-a-video-hosting-platform-named-_OpenTube_-Photoroom.png">
+    <link rel="stylesheet" href="../static/css/register.css">
+    <link rel="stylesheet" href="../static/css/main.css">
+</head>
+<body>
+    <header>
+        <div id="logoname">
+            <img id="logo" src="../static/img/DALL·E-2025-01-13-23.22.50-A-minimalist-logo-design-for-a-video-hosting-platform-named-_OpenTube_-Photoroom.png" alt="logo" height="30">
+            <h1 id="name">Vid-Open</h1>
+        </div>
+    </header>
+    <div id="background">
+        <div id="registration-pannel">
+            <h1 id="registration-title">Регистрация</h1>
+            <form action="/registration" method="post">
+                <div id="nickname">
+                    <input type="text" name="nickname" placeholder="Логин (никнейм)" required>
+                </div>
+                <br>
+                <div id="email">
+                    <input type="email" name="email" placeholder="email" required>
+                </div>
+                <br>
+                <div id="password">
+                    <input type="password" name="password" placeholder="Пароль" required>
+                </div>
+                <br>
+                <a href="/login">Уже есть аккаунт? Войти</a>
+                <br>
+                <button type="submit">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

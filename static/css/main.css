@@ -1,0 +1,249 @@
+html {
+    font-family: Roboto, Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+#menu-bar, #search-btn-mobile {
+    display: none;
+}
+
+#search {
+    font-size: 25px;
+    width: 300px;
+    border-radius: 10px;
+}
+
+#searchbtn {
+    font-size: 25px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+#searchbtn:hover {
+    background-color: black;
+    color: white;
+}
+
+#login {
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 10px 20px 10px 20px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+#login:hover {
+    color: black;
+    background-color: white;
+}
+
+#myaccount {
+    text-decoration: none;
+    color: black;
+    margin-bottom: 15px;
+}
+
+#logoname #name {
+    display: inline;
+}
+
+#navigation-panel {
+    position: fixed;
+    width: 180px;
+    height: 100%;
+    left: 0;
+}
+
+#navigation-panel #navigator {
+    color: black;
+    padding: 6px 8px 6px 16px;
+}
+
+#navigation-panel .categories {
+    text-decoration: none;
+    color: black;
+    padding: 6px 8px 6px 16px;
+    display: block;
+}
+
+#navigation-panel .categories:hover{
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+}
+
+#navigation-panel .categories-choosen {
+    text-decoration: none;
+    padding: 6px 8px 6px 16px;
+    display: block;
+    background-color: black;
+    border-radius: 10px;
+    color: white;
+}
+
+main #type {
+    margin-left: 20px
+}
+
+main {
+    padding-left: 200px;
+}
+
+main .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+
+.video {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.video .preview {
+    border-radius: 10px;
+}
+
+.video .name-video {
+    margin-top: 1px;
+}
+
+.footer-menu {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    header {
+        align-items: flex-start;
+    }
+
+    #search {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    #searchbtn {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    #navigation-panel {
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+        padding-left: 0;
+    }
+
+    #navigation-panel .categories {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    main {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .video {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .video .preview {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: white;
+        padding: 10px;
+        border-bottom: 2px solid #333;
+    }
+
+    #search, #searchbtn {
+        display: none;
+    }
+
+    #logoname {
+        display: none;
+    }
+
+    #login-mobile {
+        text-decoration: none;
+        color: white;
+        background-color: black;
+        padding: 10px;
+        border: 2px solid black;
+        border-radius: 20px;
+    }
+
+    #menu-bar, #search-btn-mobile {
+    display: flex;
+    align-items: center;
+    }
+
+    #myaccount, #login {
+        display: none;
+    }
+
+    #logoname #name {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    #navigation-panel {
+        display: none;
+    }
+
+    #navigation-panel.show {
+        display: block;
+        height: 100%;
+        width: 75%;
+    }
+
+    .video .name-video {
+        text-align: left;
+        font-size: 16px;
+    }
+
+    .video .channel {
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .footer-menu {
+        display: flex;
+        justify-content: space-around;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        padding: 10px 0;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Тень для видимости */
+    }
+
+    .footer-menu #upload-video {
+        align-content: center;
+        text-decoration: none;
+        color: white;
+        padding: 10px;
+        background-color: black;
+        border-radius: 20px;
+    }
+}

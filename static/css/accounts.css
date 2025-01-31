@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    height: 100%;
+}
+
+.main-content {
+    margin-left: 200px;
+    padding: 20px;
+}
+.profile-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.username {
+    font-size: 1.5em;
+    margin: 10px 0;
+    font-weight: bold;
+}
+.description {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 15px;
+}
+.settings-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.9em;
+}
+
+.exit-button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.9em;
+}
+
+.user_video {
+    height: 100vh;
+    margin-top: 10px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.no_video {
+    text-align: center;
+}
+
+.upload-video {
+    padding: 10px 15px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.9em;
+}
+
+@media (max-width: 440px) {
+    .main-content {
+        margin-left: 0;
+    }
+
+    .settings-button, .exit-button {
+        display: block;
+        text-align: center;
+    }
+}

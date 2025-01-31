@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keyword", content="opentube, видеохостинг, открытый исходный код, загрузка видео, видео онлайн, образовательный контент, платформа для видео, лайки и дизлайки, комментарии, подписки, администрирование контента, видео для обучения, развлекательный контент, видеофайлы, стриминг, хостинг мультимедиа.">
+    <title>Vid-Open - музыка</title>
+    <link rel="icon" type="image/x-icon" href="../static/img/DALL·E-2025-01-13-23.22.50-A-minimalist-logo-design-for-a-video-hosting-platform-named-_OpenTube_-Photoroom.png">
+    <link rel="stylesheet" href="../static/css/main.css">
+</head>
+<body>
+    <header>
+        <a id="menu-bar" href="#"><img src="{{ url_for('static', filename='img/menu_nav.png') }}" alt="" width="30"></a>
+        <div id="logoname">
+            <img id="logo" src="../static/img/DALL·E-2025-01-13-23.22.50-A-minimalist-logo-design-for-a-video-hosting-platform-named-_OpenTube_-Photoroom.png" alt="logo" height="30">
+            <h1 id="name">Vid-Open</h1>
+        </div>
+        <form action="/search" method="get">
+            <input id="search" type="text" name="search" placeholder="Введите запрос">
+            <button id="searchbtn" type="submit">Найти</button>
+        </form>
+        <a id="search-btn-mobile" href="#"><img src="{{ url_for('static', filename='img/png-clipart-search-icon-computer-icons-android-desktop-search-button-internet-share-icon-Photoroom.png') }}" height="30"></a>
+        {% if current_user.is_anonymous %}
+            <a id="login" href="/login">Вход</a>
+        {% else %}
+            <a href="/myaccount" id="myaccount">{{ current_user.username }}<img src="{{ url_for('static', filename=current_user.profile_picture) }}" alt="" height="30"></a>
+        {% endif %}
+    </header>
+
+    <nav id="navigation-panel">
+        <p id="navigator">Навигатор</p>
+        <a class="categories-choosen" href="/music">Музыка</a>
+        <a class="categories" href="/movies">Фильмы и сериалы</a>
+        <a class="categories" href="/videogame">Видеоигры</a>
+        <a class="categories" href="/news">Новости</a>
+        <a class="categories" href="/sport">Спорт</a>
+        <a class="categories" href="/learn">Обучение</a>
+    </nav>
+    
+    <main>
+        <h3 id="type">Музыка:</h3>
+        <div class="video">
+            
+        </div>
+    </main>
+
+    <footer class="footer-menu">
+        <div id="home-ico-btn">
+            <a href="/"><img src="{{ url_for('static', filename='img/home-button-icon-7.jpg') }}" alt="Домой" height="30"></a>
+        </div>
+        <div id="upload-video">
+            <a href="/myaccount/upload" id="upload-video"> + </a>
+        </div>
+        
+        {% if current_user.is_anonymous %}
+            <a id="login-mobile" href="/login">Вход</a>
+        {% else %}
+            <a href="/myaccount" id="myaccount-mobile"><img src="{{ url_for('static', filename=current_user.profile_picture) }}" alt="" height="30"></a>
+        {% endif %}
+    </footer>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#background {
+    background: linear-gradient(to bottom right, #429DE4, white);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#login-pannel {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#login-pannel input {
+    width: 100%; /* Растягивает поле на всю доступную ширину */
+    max-width: 350px; /* Ограничивает максимальную ширину */
+    padding: 10px; /* Добавляет внутренний отступ */
+    margin: 10px 0; /* Отступы сверху и снизу */
+    border: 1px solid #ccc; /* Серый цвет границы */
+    border-radius: 5px; /* Скругление углов */
+    font-size: 16px; /* Размер шрифта */
+    box-sizing: border-box; /* Учитывает padding в ширине */
+}
+
+
+#login-pannel button {
+    width: 100%; /* Кнопка растягивается по ширине */
+    max-width: 350px; /* Ограничение максимальной ширины */
+    padding: 10px;
+    background-color: white; /* Цвет кнопки */
+    color: black; /* Цвет текста */
+    border: 2px solid black; /* Без границы */
+    border-radius: 20px; /* Скругленные края */
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#login-pannel button:hover {
+    color: white;
+    background-color: black;
+}
+
+
+#login-pannel a {
+    display: block;
+    margin-top: 10px;
+}
